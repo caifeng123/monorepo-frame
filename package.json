@@ -17,6 +17,9 @@
     "*.ts?(x)": [
       "eslint --fix",
       "prettier --parser=typescript --write"
+    ],
+    "*.yaml": [
+      "prettier --parser=yaml --write"
     ]
   },
   "keywords": [],
