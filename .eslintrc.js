@@ -3,6 +3,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
+  ignorePatterns: ['**/output/*'],
   extends: ['airbnb-typescript/base'],
   plugins: ['@typescript-eslint/eslint-plugin', 'import'],
   rules: {
