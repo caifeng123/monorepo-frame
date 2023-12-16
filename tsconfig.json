@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["esnext"],
-    "allowJs": false,
+    "lib": ["esnext", "DOM"],
     "module": "ESNext",
     "moduleResolution": "node",
     "noImplicitAny": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true
   },
   "include": ["packages/*/src", ".eslintrc.js"]
 }

@@ -5,18 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "simple-git-hooks"
+    "prepare": "husky install"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "*.{js,json,yaml}": [
+    "*.{json,yaml}": [
       "prettier --write"
     ],
-    "*.ts?(x)": [
-      "eslint --fix",
-      "prettier --parser=typescript --write"
+    "*.{t,j}s?(x)": [
+      "eslint --fix"
     ],
     "*.yaml": [
       "prettier --parser=yaml --write"
@@ -26,14 +25,16 @@
   "author": "caifeng01",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.60.1",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8",
-    "simple-git-hooks": "^2.8.1",
     "typescript": "^5.1.5"
   }
 }
