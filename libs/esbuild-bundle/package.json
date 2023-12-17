@@ -1,0 +1,22 @@
+{
+  "name": "@cc/esbuild-bundle",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "typings": "./es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./es/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.19.9",
+    "fast-glob": "^3.3.2"
+  }
+}

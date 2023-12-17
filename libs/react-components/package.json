@@ -1,0 +1,35 @@
+{
+  "name": "@cc/react-components",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./cjs/index.js",
+      "types": "./es/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@cc/esbuild-bundle": "workspace:*"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "antd": "^5.12.2"
+  }
+}

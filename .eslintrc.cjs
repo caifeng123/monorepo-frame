@@ -4,7 +4,13 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  ignorePatterns: ['**/output/*', '**/es/*', '**/lib*'],
+  ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*'],
+  settings: {
+    'import/internal-regex': /^@cc\//,
+    'import/resolver': {
+      typescript: {}
+    }
+  },
   extends: [
     // 有react相关
     'airbnb',
@@ -13,9 +19,11 @@ module.exports = {
     // 纯node库可用 https://www.npmjs.com/package/eslint-config-airbnb-base
     // airbnb-base
   ],
-  plugins: ['@typescript-eslint/eslint-plugin', 'import'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'import', 'simple-import-sort'],
   rules: {
     'comma-dangle': ['error', 'never'],
-    '@typescript-eslint/comma-dangle': ['error', 'never']
+    '@typescript-eslint/comma-dangle': ['error', 'never'],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error'
   }
 };

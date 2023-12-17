@@ -3,6 +3,7 @@
   "compilerOptions": {
     "outDir": "./output",
     "esModuleInterop": true,
-    "module": "CommonJS"
+    "moduleResolution": "Node16",
+    "module": "Node16"
   }
 }
