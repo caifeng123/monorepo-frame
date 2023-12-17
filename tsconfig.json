@@ -4,10 +4,17 @@
     "lib": ["esnext", "DOM"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
     "declaration": true
   },
-  "include": ["packages/**/*", "**/.eslintrc.cjs", "commitlint.config.cjs"],
+  "include": [
+    "packages/**/*",
+    "libs/**/*",
+    "**/.eslintrc.cjs",
+    "commitlint.config.cjs"
+  ],
   "exclude": ["node_modules"]
 }

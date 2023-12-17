@@ -8,6 +8,10 @@
     "preview": "rsbuild build && rsbuild preview"
   },
   "dependencies": {
+    "@cc/react-components": "workspace:*",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "antd": "^5.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
