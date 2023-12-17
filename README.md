@@ -1,6 +1,8 @@
 # 框架介绍
 
 > 个人搭建的企业级 monorepo 框架
+>
+> 其中配置文件都为cjs结尾，定为commonJS模块区别于esm，防止项目使用 `type: module`
 
 -   使用 pnpm 进行 monorepo 管理
     -   设定 `pnpm-workspace.yaml` 工作区

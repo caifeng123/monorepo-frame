@@ -8,5 +8,6 @@
     "skipLibCheck": true,
     "declaration": true
   },
-  "include": ["packages/**/*", "**/.eslintrc.js", "commitlint.config.js"]
+  "include": ["packages/**/*", "**/.eslintrc.cjs", "commitlint.config.cjs"],
+  "exclude": ["node_modules"]
 }
