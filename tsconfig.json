@@ -3,10 +3,10 @@
     "target": "ESNext",
     "lib": ["esnext", "DOM"],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "noImplicitAny": false,
     "skipLibCheck": true,
     "declaration": true
   },
-  "include": ["packages/**/*", "**/.eslintrc.js"]
+  "include": ["packages/**/*", "**/.eslintrc.js", "commitlint.config.js"]
 }
