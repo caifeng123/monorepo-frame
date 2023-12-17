@@ -14,11 +14,17 @@
         -   关闭 vscode 自带设置的保存编辑 `editor.formatOnSave`
         -   开启 `editor.codeActionsOnSave:{source.fixAll.eslint}` 按照 eslint 规则进行自动格式化
     -   使用业内 `airbnb` 的 eslint 配置，可按要求替换为自己厂内/组内配置需求
-    -   需要配置指向 根目录配置的 `tsconfig.json` 用于解析项目级 ts 规则
+    -   每个`packages/*` 下的项目可以使用一份eslint配置 会向上合并到根目录下的root配置
+        -   其中需要指向当前目录的 `tsconfig.json` 因为配置不同
+        -   对于不同项目 需要配置对于添加对应配置，详细看`packages/*` 子包情况
     -   需要根目录安装 ：
         -   `eslint` eslint 库
-        -   `@typescript-eslint/parser @typescript-eslint/eslint-plugin` 解析 ts 语法库
-        -   `eslint-config-airbnb-typescript` airbnb 配置
+        -   airbnb 基础配置
+            -   [`eslint-config-airbnb`](https://www.npmjs.com/package/eslint-config-airbnb) airbnb react 配置
+            -   [`eslint-config-airbnb-base`](https://www.npmjs.com/package/eslint-config-airbnb-base) airbnb 基础配置（不带react信息）
+        -   airbnb ts 配置（基于基础配置）
+            -   `eslint-config-airbnb-typescript` airbnb ts 配置
+            -   `@typescript-eslint/parser @typescript-eslint/eslint-plugin` 解析 ts 语法库
         -   `eslint-plugin-import` 检查 ES6 的 import/export 语法，并防止在项目中发生文件路径和导入名字的错误的 ESLint 插件
     
 -   `prettier` 进行代码风格统一化
