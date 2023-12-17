@@ -30,12 +30,14 @@
     -   ESLint主要关注的是代码质量和代码错误。它有大量的规则来检测和报告常见的JS错误，例如未使用的变量，未定义的函数，等等。而且，ESLint可以自定义规则，以适应特定项目的要求。ESLint还支持插件，可以扩展其功能。
     -   Prettier主要关注的是代码的格式和风格。它可以自动格式化您的代码，使其格式一致，并消除不必要的或混淆的构造。Prettier没有插件系统，也没有许多配置选项。它只关心如何美化格式化你的代码。
     
--   使用 `husky + lint-staged` 进行特殊处理
+-   使用 `husky` 对git hook添加特殊执行逻辑
     - 在 『prepare』时执行 `husky install` 安装所有husky钩子
     
     - `.husky` 文件夹
     
-      -   pre-commit：提交前按文件执行 脚本处理
+      -   pre-commit：提交前
+    
+      使用lint-staged按文件执行 脚本处理
     
       ```json
       // package.json
@@ -55,6 +57,15 @@
       }
       ```
     
-      -   commit-msg：检测commit信息
+      -   commit-msg：校验commit信息
     
-      使用 [commitlint](https://commitlint.js.org/#/) 对提交信息进行校验
+      使用 [commitlint](https://commitlint.js.org/#/) 对提交信息进行校验。`type must be one of [build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test]`
+    
+      ```js
+      // commitlint.config.js
+      module.exports = {
+        extends: ['@commitlint/config-conventional']
+      }
+      ```
+    
+      
