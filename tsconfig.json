@@ -8,5 +8,5 @@
     "skipLibCheck": true,
     "declaration": true
   },
-  "include": ["packages/*/src", ".eslintrc.js"]
+  "include": ["packages/**/*", "**/.eslintrc.js"]
 }
