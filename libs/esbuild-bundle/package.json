@@ -1,7 +1,7 @@
 {
   "name": "@cc/esbuild-bundle",
   "version": "1.0.0",
-  "description": "",
+  "description": "esbuild编译包装库",
   "type": "module",
   "typings": "./es/index.d.ts",
   "exports": {
@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build": "tsc"
+    "build": "rm -rf ./es && tsc"
   },
   "keywords": [],
   "author": "",

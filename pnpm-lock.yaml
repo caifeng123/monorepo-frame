@@ -87,7 +87,14 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
 
-  packages/node: {}
+  packages/node:
+    devDependencies:
+      '@cc/esbuild-bundle':
+        specifier: workspace:*
+        version: link:../../libs/esbuild-bundle
+      '@types/node':
+        specifier: ^20.10.5
+        version: 20.10.5
 
   packages/react:
     dependencies:
@@ -1381,6 +1388,15 @@ packages:
     resolution:
       {
         integrity: sha512-k5fggr14DwAytoA/t8rPrIz++lXK7/DqckthCmoZOKNsEbJkId4Z//BqgApXBUGrGddrigYa1oqheo/7YmW4rg==
+      }
+    dependencies:
+      undici-types: 5.26.5
+    dev: true
+
+  /@types/node@20.10.5:
+    resolution:
+      {
+        integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==
       }
     dependencies:
       undici-types: 5.26.5

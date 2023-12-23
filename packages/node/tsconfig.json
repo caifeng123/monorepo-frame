@@ -1,9 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./output",
-    "esModuleInterop": true,
     "moduleResolution": "Node16",
-    "module": "Node16"
-  }
+    "module": "Node16",
+    "outDir": "es"
+  },
+  "include": ["src/**/*"]
 }
