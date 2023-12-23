@@ -8,7 +8,7 @@ const CustomButton = styled(Button)`
 
 export type SubButtonProps = ButtonProps;
 
-export function SubButton(props: SubButtonProps) {
+export default function SubButton(props: SubButtonProps) {
   const { color } = props;
   const [number, setNumber] = useState(0);
 

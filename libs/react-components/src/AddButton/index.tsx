@@ -8,7 +8,7 @@ const CustomButton = styled(Button)`
 
 export type AddButtonProps = ButtonProps;
 
-export function AddButton(props: AddButtonProps) {
+export default function AddButton(props: AddButtonProps) {
   const { color } = props;
   const [number, setNumber] = useState(0);
 

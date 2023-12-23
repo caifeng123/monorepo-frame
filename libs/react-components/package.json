@@ -7,6 +7,11 @@
   "author": "",
   "license": "ISC",
   "exports": {
+    "./*": {
+      "import": "./es/*/index.js",
+      "default": "./cjs/*/index.js",
+      "types": "./es/*/index.d.ts"
+    },
     ".": {
       "import": "./es/index.js",
       "default": "./cjs/index.js",
