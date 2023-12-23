@@ -6,6 +6,7 @@
   "scripts": {
     "build": "turbo run build",
     "lint": "turbo run lint",
+    "test": "turbo run test",
     "prepare": "husky install"
   },
   "lint-staged": {
