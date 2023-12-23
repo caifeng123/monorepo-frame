@@ -6,8 +6,10 @@ module.exports = {
   },
   ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*', '**/cjs/*', '**/dist/*'],
   settings: {
-    // 设置内部库前缀 避免eslint无法找到
+    // 默认情况下，引用的任何包都将被视为“外部”，需要出现在package.json的dependencies/devDependencies
+    // 所以对于monorepo的内部包需要设置内部库前缀，避免eslint无法找到
     'import/internal-regex': /^@cc\//,
+    // import「内部库」的路径无法正常解析, 需要覆盖typescript配置
     'import/resolver': {
       typescript: {}
     }
