@@ -61,7 +61,7 @@
   -   pre-commit：提交前使用lint-staged按文件执行 脚本处理
 
   ```js
-// package.json
+  // package.json
   {
     ...
     "lint-staged": {
