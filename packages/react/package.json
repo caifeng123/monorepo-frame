@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
-    "preview": "rsbuild build && rsbuild preview"
+    "preview": "rsbuild build && rsbuild preview",
+    "lint": "eslint --quiet ."
   },
   "dependencies": {
     "@cc/react-components": "workspace:*",

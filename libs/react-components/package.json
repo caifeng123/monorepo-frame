@@ -19,7 +19,8 @@
     }
   },
   "scripts": {
-    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc"
+    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc",
+    "lint": "eslint --quiet ."
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",

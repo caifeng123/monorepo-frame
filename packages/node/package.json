@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "node库项目模版",
   "scripts": {
-    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc"
+    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc",
+    "lint": "eslint --quiet ."
   },
   "exports": {
     ".": {
