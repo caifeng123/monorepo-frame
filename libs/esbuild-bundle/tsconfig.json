@@ -1,10 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./es",
-    "esModuleInterop": true,
+    "outDir": "es",
     "moduleResolution": "Bundler",
-    "module": "ESNext"
+    "emitDeclarationOnly": false
   },
   "include": ["src/**/*"]
 }

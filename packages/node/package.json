@@ -1,11 +1,20 @@
 {
-  "name": "node",
+  "name": "node-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "node库项目模版",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "rm -rf es/* cjs/* && node esbuild.bundle.mjs && tsc"
+  },
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "default": "./cjs/index.js",
+      "types": "./es/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@cc/esbuild-bundle": "workspace:*",
+    "@types/node": "^20.10.5"
   },
   "keywords": [],
   "author": "caifeng01",

@@ -25,13 +25,13 @@ const DEFAULT_CONFIG: BuildOptions = {
   treeShaking: true
 };
 
-export { BuildOptions } from 'esbuild';
+export type { BuildOptions } from 'esbuild';
 
 export const esbuildBundle = async (options: BuildOptions = {}) => {
-  console.time('esbuild bundle');
+  const startTime = process.hrtime.bigint();
   build({
     ...DEFAULT_CONFIG,
     ...options
   });
-  console.timeEnd('esbuild bundle');
+  return `${Number(process.hrtime.bigint() - startTime) / 1e6}ms`;
 };

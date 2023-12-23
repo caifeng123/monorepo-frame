@@ -4,7 +4,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*'],
+  ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*', '**/cjs/*'],
   settings: {
     'import/internal-regex': /^@cc\//,
     'import/resolver': {

@@ -8,7 +8,11 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "declaration": true
+    "strict": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "include": [
     "packages/**/*",

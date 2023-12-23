@@ -1,14 +1,13 @@
 import { esbuildBundle } from '@cc/esbuild-bundle';
 
 const esmBundle = esbuildBundle({
-  jsx: 'automatic'
+  platform: 'node'
 });
 
 const cjsBundle = esbuildBundle({
-  jsx: 'automatic',
   outdir: 'cjs',
   format: 'cjs',
-  platform: 'browser'
+  platform: 'node'
 });
 
 Promise.all([esmBundle, cjsBundle]).then(([esmCost, cjsCost]) => {
