@@ -8,7 +8,7 @@
 
 - 默认配置【esm、node、treeShaking】
 
-```json
+```js
 const esbuildDefaultGlob = {
   entryPoints,
   platform: 'node',
