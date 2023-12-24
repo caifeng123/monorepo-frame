@@ -16,6 +16,8 @@
     - 不打包react、react-dom，按需打包antd、lodash-es
     - 使用esbuild打包，cjs、esm版本
 
+也可用作学习用，各种配置一应俱全详细请看下面小点介绍
+
 *tips: 其中配置文件都为cjs结尾，定为commonJS模块区别于esm，项目都使用 `type: module` 默认为esm模块*
 
 ## pnpm
