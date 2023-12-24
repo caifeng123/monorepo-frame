@@ -26,12 +26,15 @@ const DEFAULT_CONFIG: BuildOptions = {
 };
 
 export type { BuildOptions } from 'esbuild';
+export * from 'esbuild';
 
 export const esbuildBundle = async (options: BuildOptions = {}) => {
   const startTime = process.hrtime.bigint();
-  build({
+  const res = await build({
     ...DEFAULT_CONFIG,
     ...options
   });
-  return `${Number(process.hrtime.bigint() - startTime) / 1e6}ms`;
+
+  console.log(`${Number(process.hrtime.bigint() - startTime) / 1e6}ms`);
+  return res;
 };

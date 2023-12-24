@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { Button, ButtonProps } from 'antd';
+import { add } from 'lodash-es';
 import { useState } from 'react';
 
 const CustomButton = styled(Button)`
@@ -13,7 +14,7 @@ export default function AddButton(props: AddButtonProps) {
   const [number, setNumber] = useState(0);
 
   return (
-    <CustomButton onClick={() => setNumber(number + 1)} color={color}>
+    <CustomButton onClick={() => setNumber(add(number, 1))} color={color}>
       +1:
       {number}
     </CustomButton>

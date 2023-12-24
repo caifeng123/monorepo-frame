@@ -4,6 +4,11 @@
   "description": "esbuild编译包装库",
   "type": "module",
   "typings": "./es/index.d.ts",
+  "files": [
+    "src",
+    "es",
+    "README/md"
+  ],
   "exports": {
     ".": {
       "import": "./es/index.js"

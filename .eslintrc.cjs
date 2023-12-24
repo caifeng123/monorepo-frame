@@ -4,7 +4,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.json'
   },
-  ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*', '**/cjs/*', '**/dist/*'],
+  ignorePatterns: ['**/output/*', '**/es/*', '**/lib/*', '**/cjs/*', '**/dist/*', '**/node_modules/*'],
   settings: {
     // 默认情况下，引用的任何包都将被视为“外部”，需要出现在package.json的dependencies/devDependencies
     // 所以对于monorepo的内部包需要设置内部库前缀，避免eslint无法找到
