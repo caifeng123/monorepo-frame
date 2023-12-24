@@ -13,7 +13,8 @@
     - 不用tsc：tsc太慢
     - 不用swc：目前不需要降级编译js，若需要则需要替换
   - `react-components`: react组件库
-    - 
+    - 不打包react、react-dom，按需打包antd、lodash-es
+    - 使用esbuild打包，cjs、esm版本
 
 *tips: 其中配置文件都为cjs结尾，定为commonJS模块区别于esm，项目都使用 `type: module` 默认为esm模块*
 
