@@ -3,8 +3,8 @@ import glob from 'fast-glob';
 
 const esbuildDefaultGlob = [
   'src/**/*.{ts,tsx,js}',
-  '!**/mock/**/*.ts',
-  '!**/*.{spec,test,mock}.ts',
+  '!**/mock/**/*.{ts,tsx}',
+  '!**/*.{spec,test,mock}.{ts,tsx}',
   '!**/*.d.ts'
 ];
 
