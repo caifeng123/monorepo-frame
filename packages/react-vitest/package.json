@@ -1,11 +1,13 @@
 {
-  "name": "rsbuild-react-ts",
+  "name": "rsbuild-react-ts-vitest",
   "private": true,
   "version": "1.0.0",
   "scripts": {
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
     "preview": "rsbuild build && rsbuild preview",
+    "test:dev": "vitest",
+    "test": "vitest run",
     "lint": "eslint --quiet ."
   },
   "dependencies": {
@@ -20,6 +22,11 @@
     "@rsbuild/plugin-react": "^0.2.5",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5.3.0"
+    "typescript": "^5.3.0",
+    "@testing-library/jest-dom": "^6.1.6",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/lodash-es": "^4.17.12",
+    "jsdom": "^23.0.1"
   }
 }
