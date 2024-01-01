@@ -83,40 +83,6 @@ importers:
       '@cc/esbuild-bundle':
         specifier: workspace:*
         version: link:../esbuild-bundle
-      '@types/lodash-es':
-        specifier: ^4.17.12
-        version: 4.17.12
-      '@types/react':
-        specifier: ^18
-        version: 18.0.0
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.0.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-
-  libs/react-components-vitest:
-    dependencies:
-      '@emotion/react':
-        specifier: ^11.11.1
-        version: 11.11.1(@types/react@18.0.0)(react@18.2.0)
-      '@emotion/styled':
-        specifier: ^11.11.0
-        version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.0.0)(react@18.2.0)
-      antd:
-        specifier: ^5.12.2
-        version: 5.12.2(react-dom@18.2.0)(react@18.2.0)
-      lodash-es:
-        specifier: ^4.17.21
-        version: 4.17.21
-    devDependencies:
-      '@cc/esbuild-bundle':
-        specifier: workspace:*
-        version: link:../esbuild-bundle
       '@testing-library/jest-dom':
         specifier: ^6.1.6
         version: 6.1.6(vitest@1.1.0)
@@ -154,14 +120,20 @@ importers:
         specifier: ^20.10.5
         version: 20.10.5
 
+  packages/node-vitest:
+    devDependencies:
+      '@cc/esbuild-bundle':
+        specifier: workspace:*
+        version: link:../../libs/esbuild-bundle
+      '@types/node':
+        specifier: ^20.10.5
+        version: 20.10.5
+
   packages/react:
     dependencies:
       '@cc/react-components':
         specifier: workspace:*
         version: link:../../libs/react-components
-      '@cc/react-components-vitest':
-        specifier: workspace:*
-        version: link:../../libs/react-components-vitest
       '@emotion/react':
         specifier: ^11.11.1
         version: 11.11.1(@types/react@18.0.0)(react@18.2.0)
@@ -187,6 +159,55 @@ importers:
       '@types/react-dom':
         specifier: ^18
         version: 18.0.0
+      typescript:
+        specifier: ^5.3.0
+        version: 5.3.2
+
+  packages/react-vitest:
+    dependencies:
+      '@cc/react-components':
+        specifier: workspace:*
+        version: link:../../libs/react-components
+      '@emotion/react':
+        specifier: ^11.11.1
+        version: 11.11.1(@types/react@18.0.0)(react@18.2.0)
+      '@emotion/styled':
+        specifier: ^11.11.0
+        version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.0.0)(react@18.2.0)
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@rsbuild/core':
+        specifier: ^0.2.5
+        version: 0.2.5
+      '@rsbuild/plugin-react':
+        specifier: ^0.2.5
+        version: 0.2.5
+      '@testing-library/jest-dom':
+        specifier: ^6.1.6
+        version: 6.1.6(vitest@1.1.0)
+      '@testing-library/react':
+        specifier: ^14.1.2
+        version: 14.1.2(react-dom@18.2.0)(react@18.2.0)
+      '@testing-library/user-event':
+        specifier: ^14.5.2
+        version: 14.5.2(@testing-library/dom@9.3.3)
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
+      '@types/react':
+        specifier: ^18
+        version: 18.0.0
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.0.0
+      jsdom:
+        specifier: ^23.0.1
+        version: 23.0.1
       typescript:
         specifier: ^5.3.0
         version: 5.3.2

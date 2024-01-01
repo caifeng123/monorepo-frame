@@ -4,6 +4,11 @@
 
 - 按需打包antd、lodash-es库
 - 不打包`react` / `react-dom`
+- 使用vitest测试
+
+## Vitest
+在每个文件夹下创建自己的__tests__文件夹，放置对于`**.test.**`文件
+使用tsconfig.build.json进行打包编译，exclude掉test文件的声明文件生成
 
 ## Esbuild
 

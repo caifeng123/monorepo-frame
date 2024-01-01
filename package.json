@@ -7,6 +7,7 @@
     "build": "turbo run build",
     "lint": "turbo run lint",
     "test": "turbo run test",
+    "ci": "turbo run deploy",
     "prepare": "husky install"
   },
   "lint-staged": {
