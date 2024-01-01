@@ -1,12 +1,15 @@
 # 框架介绍
 
 > 个人搭建的企业级 monorepo 框架
-
-可直接食用，大幅减少自己搭建项目框架的时间。针对node、react前端项目、子包打包等做了模版预设
+>
+> 1. 可直接食用，大幅减少自己搭建项目框架的时间。针对node、react前端项目、子包打包等做了模版预设
+> 2. 也可用作学习用，各种配置一应俱全详细请看下面小点介绍
 
 - `packages/`：主项目目录
   - `node`：node项目模版
+  - `node-vitest`：node项目+vitest测试模版
   - `react`：react项目模版（rsbuild生成）
+  - `react-vitest`：react项目（rsbuild生成）+vitest测试模版
 
 - `libs/`：子包目录
   - `esbuild-bundle`：使用esbuild进行快捷编译
@@ -15,8 +18,9 @@
   - `react-components`: react组件库
     - 不打包react、react-dom，按需打包antd、lodash-es
     - 使用esbuild打包，cjs、esm版本
+    - 使用vitest进行单测
 
-也可用作学习用，各种配置一应俱全详细请看下面小点介绍
+
 
 *tips: 其中配置文件都为cjs结尾，定为commonJS模块区别于esm，项目都使用 `type: module` 默认为esm模块*
 
