@@ -37,6 +37,8 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['error', 'never'],
     // 文件导入导出排序
     'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error'
+    'simple-import-sort/exports': 'error',
+    // 处理别名引入
+    'import/extensions': ['error', 'never']
   }
 };
