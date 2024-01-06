@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Button, ButtonProps } from 'antd';
 import { add } from 'lodash-es';
 
-import { useCounter } from '../hooks/useCounter';
+import { useCounter } from '@/hooks/useCounter';
 
 const CustomButton = styled(Button)`
   color: ${({ color }) => color ?? 'red'};
