@@ -1,16 +1,15 @@
 import { esbuildBundle } from '@cc/esbuild-bundle';
 
-const esmBundle = esbuildBundle({
-  platform: 'node'
-});
+const esmOption = {};
+
+const esmBundle = esbuildBundle(esmOption);
 
 const cjsBundle = esbuildBundle({
   outdir: 'cjs',
-  format: 'cjs',
-  platform: 'node'
+  format: 'cjs'
 });
 
-Promise.all([esmBundle, cjsBundle]).then(([esmCost, cjsCost]) => {
-  console.log('esmCost:', esmCost);
-  console.log('cjsCost:', cjsCost);
+Promise.all([esmBundle, cjsBundle]).then(([esm, cjs]) => {
+  console.log(`esmCost: ${esm.time}ms`);
+  console.log(`esmCost: ${cjs.time}ms`);
 });

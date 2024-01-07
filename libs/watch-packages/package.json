@@ -1,0 +1,29 @@
+{
+  "name": "@cc/watch-packages",
+  "version": "1.0.0",
+  "description": "dev热更新子包",
+  "type": "module",
+  "typings": "./es/index.d.ts",
+  "bin": {
+    "watch-libs": "./es/index.js"
+  },
+  "files": [
+    "src",
+    "es"
+  ],
+  "scripts": {
+    "build": "rm -rf es cjs && node esbuild.bundle.mjs && tsc --project tsconfig.build.json",
+    "watch": "build-es src/*",
+    "lint": "eslint --quiet ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cc/esbuild-bundle": "workspace:*",
+    "@types/node": "^20.10.5"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3"
+  }
+}

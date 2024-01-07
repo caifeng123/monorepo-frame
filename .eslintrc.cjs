@@ -39,6 +39,8 @@ module.exports = {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
     // 处理别名引入
-    'import/extensions': ['error', 'never']
+    'import/extensions': ['error', 'never'],
+    // 关闭单独导出提示
+    'import/prefer-default-export': 'off'
   }
 };
