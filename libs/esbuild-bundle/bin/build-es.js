@@ -17,7 +17,7 @@ if (!existsSync(esbuildConfPath)) {
 
 const { default: esmOption = {} } = await import(esbuildConfPath);
 if (typeof esmOption !== 'object') {
-  console.error(esbuildConfPath, 'export defalut not a object! Please check');
+  console.error(esbuildConfPath, 'export default not a object! Please check');
   process.exit(1);
 }
 
