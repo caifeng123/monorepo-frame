@@ -186,9 +186,6 @@ export class WatchScheduler {
    * 执行打包任务
    */
   private static execBuild({ packageName, filePath = '' }) {
-    console.log(`cd "${rootPath}" && pnpm --filter="./${packageName}" exec build-es src/${
-      filePath || '*'
-    }`);
     return execCommand(
       `cd "${rootPath}" && pnpm --filter="./${packageName}" exec build-es src/${
         filePath || '*'
