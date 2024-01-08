@@ -30,11 +30,10 @@ export * from 'esbuild';
 
 export const esbuildBundle = async (options: BuildOptions = {}) => {
   const startTime = process.hrtime.bigint();
-  const res = await build({
+  const result = await build({
     ...DEFAULT_CONFIG,
     ...options
   });
-
-  console.log(`${Number(process.hrtime.bigint() - startTime) / 1e6}ms`);
-  return res;
+  const time = Number(process.hrtime.bigint() - startTime) / 1e6;
+  return { result, time };
 };

@@ -1,13 +1,16 @@
 {
   "name": "@cc/esbuild-bundle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "esbuild编译包装库",
   "type": "module",
+  "bin": {
+    "build-es": "./bin/build-es.js"
+  },
   "typings": "./es/index.d.ts",
   "files": [
     "src",
     "es",
-    "README/md"
+    "README.md"
   ],
   "exports": {
     ".": {

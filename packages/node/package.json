@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@cc/esbuild-bundle": "workspace:*",
+    "@cc/watch-packages": "workspace:*",
     "@types/node": "^20.10.5"
   },
   "keywords": [],

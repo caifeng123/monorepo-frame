@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "rsbuild dev --open",
+    "dev": "rsbuild dev --open & watch-libs",
     "build": "rsbuild build",
     "preview": "rsbuild build && rsbuild preview",
     "test:dev": "vitest",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@cc/react-components": "workspace:*",
+    "@cc/watch-packages": "workspace:*",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "react": "^18.2.0",
