@@ -5,7 +5,7 @@
   "type": "module",
   "typings": "./es/index.d.ts",
   "bin": {
-    "watch-libs": "./es/index.js"
+    "watch-libs": "./bin/watch-libs.js"
   },
   "files": [
     "src",
