@@ -10,7 +10,6 @@
   - `node-vitest`：node项目+vitest测试模版
   - `react`：react项目模版（rsbuild生成）
   - `react-vitest`：react项目（rsbuild生成）+vitest测试模版
-
 - `libs/`：子包目录
   - `esbuild-bundle`：使用esbuild进行快捷编译
     - 不用tsc：tsc太慢
@@ -19,6 +18,10 @@
     - 不打包react、react-dom，按需打包antd、lodash-es
     - 使用esbuild打包，cjs、esm版本
     - 使用vitest进行单测
+  - `watch-packages` : 主项目开发时需要对子包进行热更新
+    - 使用chokidar对子包进行文件监听
+    - 实现WatchScheduler进行批量文件聚合调度
+    - 对外暴露watch-libs方法 会自动递归当前项目依赖的子包进行监听
 
 
 
@@ -122,3 +125,15 @@
 
 - 项目对lint、test、build进行缓存产物使得构建加速
 
+
+
+## workflows
+
+> 接入github action工作流
+
+- compile.yml 对所有分支push进行监听
+  - 执行build
+  - 并发执行test和lint
+- deploy.yml 对master进行监听
+  - 执行build: react项目
+  - 执行 github page 部署

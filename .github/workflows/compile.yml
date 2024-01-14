@@ -50,6 +50,7 @@ jobs:
     name: test
     needs: build
     runs-on: ubuntu-latest
+    # 由于每个任务环境独立，因此需要重新安装，但有缓存
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -74,6 +75,7 @@ jobs:
     name: lint
     needs: build
     runs-on: ubuntu-latest
+    # 由于每个任务环境独立，因此需要重新安装，但有缓存
     steps:
       - name: Checkout
         uses: actions/checkout@v4
