@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: build react project in monorepo and deploy to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -11,11 +10,8 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
-  pages: write
+  contents: read
   id-token: write
-  pull-requests: write
-  repository-projects: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -46,7 +42,7 @@ jobs:
           cache: 'pnpm'
  
       - name: Build
-        run: sh scripts/build.sh
+        run: sh scripts/buildfe.sh
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

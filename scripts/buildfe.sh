@@ -1,10 +1,9 @@
 #!/bin/bash
 
-# corepack enable
 node -v
 pnpm -v
-echo "安装..."
+echo "install..."
 pnpm install
 
-echo "编译"
+echo "building..."
 pnpm build:react
