@@ -40,15 +40,30 @@ jobs:
           node-version: 20
           cache: 'pnpm'
  
-      - name: Install and Build
-        run: |
-          pnpm install
-          npx turbo run build
+      - name: Install
+        run: pnpm install
+      
+      - name: Build
+        run: npx turbo run build
+
   test:
     name: test
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: all packages test
         run: npx turbo run test
   lint:
@@ -56,5 +71,18 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
       - name: all packages lint
         run: npx turbo run lint
