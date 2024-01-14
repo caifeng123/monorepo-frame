@@ -47,12 +47,14 @@ jobs:
           turbo run build
   test:
     name: test
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: all packages test
         run: turbo run test
   lint:
     name: lint
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: all packages lint
